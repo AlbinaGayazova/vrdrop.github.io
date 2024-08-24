@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VRdrop</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Tektur:wght@400..900&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="img/logotype.ico"><!-- 32×32 -->
+    <meta name="keywords" content="важные, ключевые, слова">
+    <meta name="description" content="краткое описание">
+
+</head>
+
+<body>
+
+    <header>
+        <h1>
+            <a href="aaa.php" class="underline-one">О нас</a>
+        </h1>
+        <h1> <a href="game.php" class="underline-one">Список игр</a>
+
+        </h1>
+        <div class="logo">
+            <a href="index.php"> <img src="img/logotype.png" alt="VRdrop"></a>
+        </div>
+        <h1>
+            <a href="price.php" class="underline-one">Прайс-лист</a>
+
+        </h1>
+        <h1>
+            <a href="contact.php" class="underline-one">Контакты</a>
+
+        </h1>
+    </header>
+    <div class="btn-up btn-up_hide"></div>
+    <script>const btnUp = {
+      el: document.querySelector('.btn-up'),
+      show() {
+        // удалим у кнопки класс btn-up_hide
+        this.el.classList.remove('btn-up_hide');
+      },
+      hide() {
+        // добавим к кнопке класс btn-up_hide
+        this.el.classList.add('btn-up_hide');
+      },
+      addEventListener() {
+        // при прокрутке содержимого страницы
+        window.addEventListener('scroll', () => {
+          // определяем величину прокрутки
+          const scrollY = window.scrollY || document.documentElement.scrollTop;
+          // если страница прокручена больше чем на 400px, то делаем кнопку видимой, иначе скрываем
+          scrollY > 400 ? this.show() : this.hide();
+        });
+        // при нажатии на кнопку .btn-up
+        document.querySelector('.btn-up').onclick = () => {
+          // переместим в начало страницы
+          window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: 'smooth'
+          });
+        }
+      }
+    }
+    
+    btnUp.addEventListener();</script>
